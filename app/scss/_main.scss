@@ -2,3 +2,10 @@
  * Main content
  */
 
+.main {
+
+  & .slider {
+    height: 530px;
+    background: url(../images/top-bg.jpg) center center no-repeat;
+  }
+}

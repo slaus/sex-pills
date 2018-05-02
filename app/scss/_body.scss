@@ -1,28 +1,33 @@
 /*!
  * Body content
  */
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
+
 body {
   padding: 0;
   margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
 }
 
 /* error if tags without attr */
 img:not([alt]),
 label:not([for]),
 input[type=submit]:not([value]) {
-  outline:1px dotted red;
+  outline: 1px dotted red;
 }
 
 /* error if first child not used  */
 ul > *:not(li),
 ol > *:not(li),
 dl > *:not(dt):not(dd) {
-  outline:1px dotted red;
+  outline: 1px dotted red;
 }
 
 input:focus, textarea, a, button {
   outline: none !important;
-  -webkit-appearance: none !important; //trouble with radiobutton
+  //-webkit-appearance: none !important; //trouble with radiobutton
 }
 
 .clearfix {
@@ -38,3 +43,34 @@ input:focus, textarea, a, button {
   }
 }
 
+.wrapper {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+#back-to-top {
+  color: $white;
+  width: 50px;
+  height: 50px;
+  background: $red;
+  text-transform: uppercase;
+  position: fixed;
+  right: 20px;
+  bottom: 50px;
+  line-height: 45px;
+  font-size: 26px;
+  text-align: center;
+  cursor: pointer;
+  display: none;
+  z-index: 999;
+
+  &:hover {
+    background: $red-dark;
+    text-decoration: none;
+  }
+}
+
+.flex {
+  display: flex;
+}
